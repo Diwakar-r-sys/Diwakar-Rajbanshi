@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Flame, Timer } from 'lucide-react';
+import { X, Flame } from 'lucide-react';
 import { getMotivationalQuote } from '../services/geminiService';
 
 interface EmergencyModalProps {

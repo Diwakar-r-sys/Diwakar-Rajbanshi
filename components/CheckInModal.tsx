@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sun, Moon, CheckCircle, Save } from 'lucide-react';
+import { Sun, Moon, Save } from 'lucide-react';
 import { DailyLog } from '../types';
 
 interface CheckInModalProps {

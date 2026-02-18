@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { YouTubeStats, VideoProject } from '../types';
-import { Youtube, TrendingUp, DollarSign, Users, Plus, Trash2, CheckSquare, Square, Check, Link as LinkIcon, Edit2 } from 'lucide-react';
+import { Youtube, TrendingUp, DollarSign, Users, Trash2, CheckSquare, Check, Link as LinkIcon, Edit2 } from 'lucide-react';
 
 interface YouTubeDashboardProps {
   stats: YouTubeStats;

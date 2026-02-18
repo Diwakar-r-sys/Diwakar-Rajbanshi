@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { LayoutDashboard, CalendarClock, BookOpen, Youtube, Settings, AlertTriangle, Menu, X, CheckSquare, Target, Plus, Trash2, Check, Library } from 'lucide-react';
-import { Subject, YouTubeStats, VideoProject, AppView, DailyLog, GoalTask, Task } from './types';
+import React, { useState } from 'react';
+import { LayoutDashboard, CalendarClock, BookOpen, Youtube, AlertTriangle, Menu, X, Target, Plus, Trash2, Check, Library } from 'lucide-react';
+import { Subject, YouTubeStats, VideoProject, AppView, DailyLog, GoalTask } from './types';
 import { Timeline } from './components/Timeline';
 import { ExamTracker } from './components/ExamTracker';
 import { YouTubeDashboard } from './components/YouTubeDashboard';
@@ -175,10 +175,6 @@ const App: React.FC = () => {
 
   // --- Pending Tasks Logic ---
   
-  // Find the first subject with incomplete tasks to focus on in the widget
-  const focusedSubject = subjects.find(s => s.tasks.some(t => !t.completed)) || subjects[0];
-  const focusedSubjectTasks = focusedSubject ? focusedSubject.tasks.filter(t => !t.completed).slice(0, 6) : [];
-
   // Get all incomplete video tasks
   const pendingVideoTasks = videos
     .filter(v => !v.isCompleted)
